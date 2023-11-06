@@ -1,10 +1,10 @@
 library(tidyverse)
 library(rvest)
 
-# EXTRACT MOVIE INFORMATION FROM IMDb - EXAMPLE WITH FROZEN
+# EXTRACT MOVIE INFORMATION FROM IMDb - EXAMPLE USING FROZEN
 
 
-# Read in the Frozen html page (https://www.imdb.com/title/tt2294629/)
+# Read in R the Frozen html page (https://www.imdb.com/title/tt2294629/)
 # Store it in an object called `frozen`
 frozen <- read_html(x = "http://www.imdb.com/title/tt2294629/")
 
@@ -19,7 +19,7 @@ html_text(x = cast)
 cast2 <- html_nodes(x = frozen, css = "#titleCast td:nth-child(2) a")
 html_text(x = cast2)
 
-## cleaned up text
+## cleaned up text (use strigr, see regex lecture)
 cast2 %>%
   html_text() %>%
   # remove empty white space

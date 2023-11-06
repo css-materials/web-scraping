@@ -6,7 +6,7 @@ library(rvest)
 
 # TASK 1: Look up the cost of living for your hometown on 
 # Sperling's Best Places website: http://www.bestplaces.net/ 
-# Then, extract it with `html_elements()` and `html_text2()`
+# Then extract it with `html_elements()` and `html_text2()`
 
 
 
